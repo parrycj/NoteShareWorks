@@ -1,0 +1,115 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myNoteLabel" data-translate="noteShareApp.note.home.createOrEditLabel">Create or edit a Note</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.note.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.note.id" readonly />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setNoteContent($file, vm.note)">
+            <label class="control-label" data-translate="noteShareApp.note.noteContent" for="field_noteContent">Note Content</label>
+            <div>
+                <div ng-if="vm.note.noteContent" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.note.noteContentContentType, vm.note.noteContent)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.note.noteContentContentType}}, {{vm.byteSize(vm.note.noteContent)}}</span>
+                    <button type="button" ng-click="vm.note.noteContent=null;vm.note.noteContentContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setNoteContent($file, vm.note)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="noteContent" id="field_noteContent"
+                    ng-model="vm.note.noteContent"
+                    required />
+            <input type="hidden" class="form-control" name="noteContentContentType" id="field_noteContentContentType"
+                    ng-model="vm.note.noteContentContentType" />
+            <div ng-show="editForm.noteContent.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.noteContent.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="noteShareApp.note.dateSubmitted" for="field_dateSubmitted">Date Submitted</label>
+                <div class="input-group">
+                    <input id="field_dateSubmitted" type="text" class="form-control" name="dateSubmitted" datetime-picker="{{dateformat}}" ng-model="vm.note.dateSubmitted" is-open="vm.datePickerOpenStatus.dateSubmitted"
+                    required  />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateSubmitted')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.dateSubmitted.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.dateSubmitted.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.dateSubmitted.$error.ZonedDateTimelocal" data-translate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="noteShareApp.note.overallRating" for="field_overallRating">Overall Rating</label>
+            <input type="number" class="form-control" name="overallRating" id="field_overallRating"
+                    ng-model="vm.note.overallRating"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="noteShareApp.note.handwritingRating" for="field_handwritingRating">Handwriting Rating</label>
+            <input type="number" class="form-control" name="handwritingRating" id="field_handwritingRating"
+                    ng-model="vm.note.handwritingRating"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="noteShareApp.note.usefulnessRating" for="field_usefulnessRating">Usefulness Rating</label>
+            <input type="number" class="form-control" name="usefulnessRating" id="field_usefulnessRating"
+                    ng-model="vm.note.usefulnessRating"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="noteShareApp.note.privacy" for="field_privacy">Privacy</label>
+            <select class="form-control" name="privacy" ng-model="vm.note.privacy" id="field_privacy">
+                <option value="PUBLIC" data-translate="noteShareApp.Privacy.PUBLIC">PUBLIC</option>
+                <option value="PRIVATE" data-translate="noteShareApp.Privacy.PRIVATE">PRIVATE</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="noteShareApp.note.creator" for="field_creator">Creator</label>
+            <select class="form-control" id="field_creator" name="creator" ng-model="vm.note.creator" ng-options="user as user.id for user in vm.users track by user.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="noteShareApp.note.noteCourse" for="field_noteCourse">Note Course</label>
+            <select class="form-control" id="field_noteCourse" name="noteCourse" ng-model="vm.note.noteCourse" ng-options="course as course.id for course in vm.courses track by course.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="noteShareApp.note.tags" for="field_tags">Tags</label>
+            <select class="form-control" id="field_tags" multiple name="tags" ng-model="vm.note.tags" ng-options="tag as tag.id for tag in vm.tags track by tag.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

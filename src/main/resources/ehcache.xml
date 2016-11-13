@@ -42,5 +42,33 @@
            timeToLiveSeconds="3600">
     </cache>
 
+    <cache name="com.jzheadley.noteshare.domain.Tag"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.jzheadley.noteshare.domain.Note"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.jzheadley.noteshare.domain.Note.tags"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.jzheadley.noteshare.domain.Course"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.jzheadley.noteshare.domain.School"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.jzheadley.noteshare.domain.Professor"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.jzheadley.noteshare.domain.Professor.courses"
+        timeToLiveSeconds="3600">
+    </cache>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </ehcache>

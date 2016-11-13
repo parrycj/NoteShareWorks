@@ -1,0 +1,30 @@
+{
+    "noteShareApp": {
+        "note" : {
+            "home": {
+                "title": "Notes",
+                "createLabel": "Pridať Note",
+                "createOrEditLabel": "Pridať alebo upraviť Note",
+                "search": "Vyhľadať Note"
+            },
+            "created": "Bol vytvorený potomok entity Note s identifikátorom {{ param }}",
+            "updated": "Potomok entity Note s identifikátorom {{ param }} bol upravený.",
+            "deleted": "Potomok entity Note s identifikátorom {{ param }} bol vymazaný.",
+            "delete": {
+                "question": "Ste si istý, že chcete vymazať Note {{ id }}?"
+            },
+            "detail": {
+                "title": "Note"
+            },
+            "noteContent": "Note Content",
+            "dateSubmitted": "Date Submitted",
+            "overallRating": "Overall Rating",
+            "handwritingRating": "Handwriting Rating",
+            "usefulnessRating": "Usefulness Rating",
+            "privacy": "Privacy",
+            "creator": "Creator",
+            "noteCourse": "Note Course",
+            "tags": "Tags"
+        }
+    }
+}

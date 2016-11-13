@@ -1,0 +1,66 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "creator",
+            "otherEntityName": "user",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "note"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "noteCourse",
+            "otherEntityName": "course",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "tags",
+            "otherEntityName": "tag",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "noteContent",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dateSubmitted",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "overallRating",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "handwritingRating",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "usefulnessRating",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "privacy",
+            "fieldType": "Privacy",
+            "fieldValues": "PUBLIC,PRIVATE"
+        }
+    ],
+    "changelogDate": "20161113073149",
+    "entityTableName": "note",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

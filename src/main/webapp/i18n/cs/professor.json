@@ -1,0 +1,25 @@
+{
+    "noteShareApp": {
+        "professor" : {
+            "home": {
+                "title": "Professors",
+                "createLabel": "Vytvořit Professor",
+                "createOrEditLabel": "Vytvořit nebo upravit Professor",
+                "search": "Vyhledat Professor"
+            },
+            "created": "Byl vytvořen potomek entity Professor s identifikátorem {{ param }}",
+            "updated": "Potomek entity Professor s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Professor s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Professor {{ id }}?"
+            },
+            "detail": {
+                "title": "Professor"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "courses": "Courses",
+            "school": "School"
+        }
+    }
+}

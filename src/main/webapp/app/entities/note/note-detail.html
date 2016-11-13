@@ -1,0 +1,60 @@
+
+<div>
+    <h2><span data-translate="noteShareApp.note.detail.title">Note</span> {{vm.note.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="noteShareApp.note.noteContent">Note Content</span></dt>
+        <dd>
+            <div ng-if="vm.note.noteContent">
+                <a ng-click="vm.openFile(vm.note.noteContentContentType, vm.note.noteContent)" data-translate="entity.action.open">open</a>
+                {{vm.note.noteContentContentType}}, {{vm.byteSize(vm.note.noteContent)}}
+            </div>
+        </dd>
+        <dt><span data-translate="noteShareApp.note.dateSubmitted">Date Submitted</span></dt>
+        <dd>
+            <span>{{vm.note.dateSubmitted | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="noteShareApp.note.overallRating">Overall Rating</span></dt>
+        <dd>
+            <span>{{vm.note.overallRating}}</span>
+        </dd>
+        <dt><span data-translate="noteShareApp.note.handwritingRating">Handwriting Rating</span></dt>
+        <dd>
+            <span>{{vm.note.handwritingRating}}</span>
+        </dd>
+        <dt><span data-translate="noteShareApp.note.usefulnessRating">Usefulness Rating</span></dt>
+        <dd>
+            <span>{{vm.note.usefulnessRating}}</span>
+        </dd>
+        <dt><span data-translate="noteShareApp.note.privacy">Privacy</span></dt>
+        <dd>
+            <span data-translate="{{'noteShareApp.Privacy.' + vm.note.privacy}}">{{vm.note.privacy}}</span>
+        </dd>
+        <dt><span data-translate="noteShareApp.note.creator">Creator</span></dt>
+        <dd>
+            {{vm.note.creator.id}}
+        </dd>
+        <dt><span data-translate="noteShareApp.note.noteCourse">Note Course</span></dt>
+        <dd>
+            <a ui-sref="course-detail({id:vm.note.noteCourse.id})">{{vm.note.noteCourse.id}}</a>
+        </dd>
+        <dt><span data-translate="noteShareApp.note.tags">Tags</span></dt>
+        <dd>
+            <span ng-repeat="tags in vm.note.tags">
+                <a ui-sref="tag-detail({id: tags.id})">{{tags.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="note-detail.edit({id:vm.note.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

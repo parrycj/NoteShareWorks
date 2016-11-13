@@ -1,0 +1,22 @@
+{
+    "noteShareApp": {
+        "school" : {
+            "home": {
+                "title": "Schools",
+                "createLabel": "Pridať School",
+                "createOrEditLabel": "Pridať alebo upraviť School",
+                "search": "Vyhľadať School"
+            },
+            "created": "Bol vytvorený potomok entity School s identifikátorom {{ param }}",
+            "updated": "Potomok entity School s identifikátorom {{ param }} bol upravený.",
+            "deleted": "Potomok entity School s identifikátorom {{ param }} bol vymazaný.",
+            "delete": {
+                "question": "Ste si istý, že chcete vymazať School {{ id }}?"
+            },
+            "detail": {
+                "title": "School"
+            },
+            "name": "Name"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "noteShareApp": {
+        "tag" : {
+            "home": {
+                "title": "Tags",
+                "createLabel": "Vytvořit Tag",
+                "createOrEditLabel": "Vytvořit nebo upravit Tag",
+                "search": "Vyhledat Tag"
+            },
+            "created": "Byl vytvořen potomek entity Tag s identifikátorem {{ param }}",
+            "updated": "Potomek entity Tag s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Tag s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Tag {{ id }}?"
+            },
+            "detail": {
+                "title": "Tag"
+            },
+            "name": "Name"
+        }
+    }
+}
