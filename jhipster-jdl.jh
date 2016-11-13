@@ -1,0 +1,51 @@
+
+entity Tag {
+  name String
+}
+
+entity Note {
+	noteContent AnyBlob required
+  	dateSubmitted ZonedDateTime required
+  	overallRating Integer
+    handwritingRating Integer
+    usefulnessRating Integer
+    privacy Privacy
+}
+
+enum Privacy {
+    PUBLIC, PRIVATE
+}
+
+entity Course {
+  courseName String required
+  courseCode String
+}
+entity School {
+	name String required
+}
+
+entity Professor {
+  firstName String,
+  lastName String required
+}
+
+relationship OneToOne {
+  	Note{creator} to User
+}
+
+relationship ManyToOne {
+  Professor{school} to School
+}
+
+relationship ManyToOne {
+  Note{noteCourse} to Course
+}
+
+relationship OneToMany {
+  Professor{courses} to Course
+}
+
+relationship ManyToMany {
+	Note{tags} to Tag
+}
+
