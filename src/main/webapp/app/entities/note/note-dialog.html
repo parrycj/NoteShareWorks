@@ -89,19 +89,19 @@
 
         <div class="form-group">
             <label data-translate="noteShareApp.note.creator" for="field_creator">Creator</label>
-            <select class="form-control" id="field_creator" name="creator" ng-model="vm.note.creator" ng-options="user as user.id for user in vm.users track by user.id">
+            <select class="form-control" id="field_creator" name="creator" ng-model="vm.note.creator" ng-options="user as user.login for user in vm.users track by user.id">
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
             <label data-translate="noteShareApp.note.noteCourse" for="field_noteCourse">Note Course</label>
-            <select class="form-control" id="field_noteCourse" name="noteCourse" ng-model="vm.note.noteCourse" ng-options="course as course.id for course in vm.courses track by course.id">
+            <select class="form-control" id="field_noteCourse" name="noteCourse" ng-model="vm.note.noteCourse" ng-options="course as course.courseName for course in vm.courses track by course.id">
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
             <label data-translate="noteShareApp.note.tags" for="field_tags">Tags</label>
-            <select class="form-control" id="field_tags" multiple name="tags" ng-model="vm.note.tags" ng-options="tag as tag.id for tag in vm.tags track by tag.id"></select>
+            <select class="form-control" id="field_tags" multiple name="tags" ng-model="vm.note.tags" ng-options="tag as tag.name for tag in vm.tags track by tag.id"></select>
         </div>
     </div>
     <div class="modal-footer">

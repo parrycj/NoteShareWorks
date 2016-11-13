@@ -48,7 +48,7 @@
                     <td>{{course.courseName}}</td>
                     <td>{{course.courseCode}}</td>
                     <td>
-                        <a ui-sref="professor-detail({id:course.professor.id})">{{course.professor.id}}</a>
+                        <a ui-sref="professor-detail({id:course.professor.id})">{{course.professor.firstName + " " + course.professor.lastName }}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">

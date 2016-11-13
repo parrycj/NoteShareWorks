@@ -34,7 +34,7 @@
 
         <div class="form-group">
             <label data-translate="noteShareApp.course.professor" for="field_professor">Professor</label>
-            <select class="form-control" id="field_professor" name="professor" ng-model="vm.course.professor" ng-options="professor as professor.id for professor in vm.professors track by professor.id">
+            <select class="form-control" id="field_professor" name="professor" ng-model="vm.course.professor" ng-options="professor as professor.lastName for professor in vm.professors track by professor.id">
                 <option value=""></option>
             </select>
         </div>

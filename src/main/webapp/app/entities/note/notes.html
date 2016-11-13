@@ -61,14 +61,14 @@
                     <td>{{note.usefulnessRating}}</td>
                     <td data-translate="{{'noteShareApp.Privacy.' + note.privacy}}">{{note.privacy}}</td>
                     <td>
-                        {{note.creator.id}}
+                        {{note.creator.login}}
                     </td>
                     <td>
-                        <a ui-sref="course-detail({id:note.noteCourse.id})">{{note.noteCourse.id}}</a>
+                        <a ui-sref="course-detail({id:note.noteCourse.id})">{{note.noteCourse.courseName}}</a>
                     </td>
                     <td>
                         <span ng-repeat="tags in note.tags">
-                            <a class="form-control-static" ui-sref="tag-detail({id: tags.id})">{{tags.id}}</a>{{$last ? '' : ', '}}
+                            <a class="form-control-static" ui-sref="tag-detail({id: tags.id})">{{tags.name}}</a>{{$last ? '' : ', '}}
                         </span>
                     </td>
                     <td class="text-right">

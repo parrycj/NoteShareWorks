@@ -12,6 +12,7 @@
 
 
 spring:
+
     profiles:
         active: dev
         include: swagger
@@ -43,7 +44,7 @@ spring:
     data:
         elasticsearch:
             cluster-name:
-            cluster-nodes:
+            cluster-nodes: 0.0.0.0:9200
             properties:
                 path:
                   logs: target/elasticsearch/log
@@ -98,3 +99,7 @@ jhipster:
             host: localhost
             port: 5000
             queueSize: 512
+
+
+
+

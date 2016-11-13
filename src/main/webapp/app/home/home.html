@@ -1,16 +1,30 @@
-<div ng-cloak>
+<div ng-cloak eui-index="'Notes'">
     <form class="searchform cf" id="schoolTeacherButton">
-        <input type="text" placeholder="School?">
-        <input type="text" placeholder="Class Code? ex. ECON101">
-        <button type="submit">Submit</button>
+        <input type="text" placeholder="School">
+        <input type="text" placeholder="Class Code ex. ECON101">
+        <span class="width-min">
+                            <a href="#/course/1"><button class="btn bn-info"
+                                                         ng-ctlick="vm.search(vm.searchQuery1,vm.searchQuery2)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button></a>
+                        </span>
     </form>
 
 
     <h1>OR</h1>
 
-
+    <!--<form name="searchForm" class="form-inline">-->
     <form class="searchform cf" id="searchKeywordButton">
-        <input type="text" placeholder="Search by keyword, ex. ">
-        <button type="submit">Search</button>
+        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery"
+               placeholder="Search by keyword, ex. ">
+        <span class="width-min">
+                           <a href="#/note"><button class="btn btn-info"
+                                                                      ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button></a>
+                        </span>
     </form>
+
+
 </div>
+>

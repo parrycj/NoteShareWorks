@@ -33,16 +33,16 @@
         </dd>
         <dt><span data-translate="noteShareApp.note.creator">Creator</span></dt>
         <dd>
-            {{vm.note.creator.id}}
+            {{vm.note.creator.login}}
         </dd>
         <dt><span data-translate="noteShareApp.note.noteCourse">Note Course</span></dt>
         <dd>
-            <a ui-sref="course-detail({id:vm.note.noteCourse.id})">{{vm.note.noteCourse.id}}</a>
+            <a ui-sref="course-detail({courseName:vm.note.noteCourse.courseName})">{{vm.note.noteCourse.courseName}}</a>
         </dd>
         <dt><span data-translate="noteShareApp.note.tags">Tags</span></dt>
         <dd>
             <span ng-repeat="tags in vm.note.tags">
-                <a ui-sref="tag-detail({id: tags.id})">{{tags.id}}</a>{{$last ? '' : ', '}}
+                <a ui-sref="tag-detail({name: tags.name})">{{tags.name}}</a>{{$last ? '' : ', '}}
             </span>
         </dd>
     </dl>
