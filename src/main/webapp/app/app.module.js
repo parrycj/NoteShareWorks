@@ -3,9 +3,9 @@
 
     angular
         .module('noteShareApp', [
-            'ngStorage', 
+            'ngStorage',
             'tmh.dynamicLocale',
-            'pascalprecht.translate', 
+            'pascalprecht.translate',
             'ngResource',
             'ngCookies',
             'ngAria',
@@ -13,10 +13,10 @@
             'ngFileUpload',
             'ui.bootstrap',
             'ui.bootstrap.datetimepicker',
-            'ui.router',
-            'infinite-scroll',
+            'ui.router'
+            // 'infinite-scroll',
             // jhipster-needle-angularjs-add-module JHipster will add new module here
-            'angular-loading-bar'
+            // 'angular-loading-bar'
         ])
         .run(run);
 
