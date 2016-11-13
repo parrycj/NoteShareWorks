@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="noteShareApp.professor.detail.title">Professor</span> {{vm.professor.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="noteShareApp.professor.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.professor.firstName}}</span>
+        </dd>
+        <dt><span data-translate="noteShareApp.professor.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.professor.lastName}}</span>
+        </dd>
+        <dt><span data-translate="noteShareApp.professor.school">School</span></dt>
+        <dd>
+            <a ui-sref="school-detail({id:vm.professor.school.id})">{{vm.professor.school.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="professor-detail.edit({id:vm.professor.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

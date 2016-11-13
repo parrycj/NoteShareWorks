@@ -1,0 +1,30 @@
+{
+    "noteShareApp": {
+        "note" : {
+            "home": {
+                "title": "Notes",
+                "createLabel": "Создать новый Note",
+                "createOrEditLabel": "Создать или отредактировать Note",
+                "search": "Найти Note"
+            },
+            "created": "Новый Note создан с идентификатором {{ param }}",
+            "updated": "Note обновлен с идентификатором {{ param }}",
+            "deleted": "Note удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Note {{ id }}?"
+            },
+            "detail": {
+                "title": "Note"
+            },
+            "noteContent": "Note Content",
+            "dateSubmitted": "Date Submitted",
+            "overallRating": "Overall Rating",
+            "handwritingRating": "Handwriting Rating",
+            "usefulnessRating": "Usefulness Rating",
+            "privacy": "Privacy",
+            "creator": "Creator",
+            "noteCourse": "Note Course",
+            "tags": "Tags"
+        }
+    }
+}

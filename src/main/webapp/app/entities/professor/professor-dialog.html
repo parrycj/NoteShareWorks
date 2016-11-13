@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myProfessorLabel" data-translate="noteShareApp.professor.home.createOrEditLabel">Create or edit a Professor</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.professor.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.professor.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="noteShareApp.professor.firstName" for="field_firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" id="field_firstName"
+                    ng-model="vm.professor.firstName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="noteShareApp.professor.lastName" for="field_lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" id="field_lastName"
+                    ng-model="vm.professor.lastName"
+                    required />
+            <div ng-show="editForm.lastName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.lastName.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="noteShareApp.professor.school" for="field_school">School</label>
+            <select class="form-control" id="field_school" name="school" ng-model="vm.professor.school" ng-options="school as school.id for school in vm.schools track by school.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

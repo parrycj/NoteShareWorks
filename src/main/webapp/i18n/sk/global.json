@@ -7,6 +7,11 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entity",
+                "tag": "Tag",
+                "note": "Note",
+                "course": "Course",
+                "school": "School",
+                "professor": "Professor",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

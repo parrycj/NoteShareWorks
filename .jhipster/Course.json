@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "professor",
+            "otherEntityName": "professor",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "courseName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "courseCode",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161113073150",
+    "entityTableName": "course",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

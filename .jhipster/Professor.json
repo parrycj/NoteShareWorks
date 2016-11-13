@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "courses",
+            "otherEntityName": "course",
+            "otherEntityRelationshipName": "professor"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "school",
+            "otherEntityName": "school",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20161113073152",
+    "entityTableName": "professor",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

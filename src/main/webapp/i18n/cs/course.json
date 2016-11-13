@@ -1,0 +1,24 @@
+{
+    "noteShareApp": {
+        "course" : {
+            "home": {
+                "title": "Courses",
+                "createLabel": "Vytvořit Course",
+                "createOrEditLabel": "Vytvořit nebo upravit Course",
+                "search": "Vyhledat Course"
+            },
+            "created": "Byl vytvořen potomek entity Course s identifikátorem {{ param }}",
+            "updated": "Potomek entity Course s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Course s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Course {{ id }}?"
+            },
+            "detail": {
+                "title": "Course"
+            },
+            "courseName": "Course Name",
+            "courseCode": "Course Code",
+            "professor": "Professor"
+        }
+    }
+}

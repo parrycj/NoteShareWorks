@@ -1,0 +1,25 @@
+{
+    "noteShareApp": {
+        "professor" : {
+            "home": {
+                "title": "Professors",
+                "createLabel": "Создать новый Professor",
+                "createOrEditLabel": "Создать или отредактировать Professor",
+                "search": "Найти Professor"
+            },
+            "created": "Новый Professor создан с идентификатором {{ param }}",
+            "updated": "Professor обновлен с идентификатором {{ param }}",
+            "deleted": "Professor удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Professor {{ id }}?"
+            },
+            "detail": {
+                "title": "Professor"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "courses": "Courses",
+            "school": "School"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "noteShareApp": {
+        "Privacy" : {
+            "null": "",
+            "PUBLIC": "PUBLIC",
+            "PRIVATE": "PRIVATE"
+        }
+    }
+}
